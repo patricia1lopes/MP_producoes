@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nossos Serviços</title>
+
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="midia/logo.png" alt="Logo da Empresa">
+            </a>
+        </div>
+        <nav>
+            <div class="menu-esquerda">
+                <a href="quemsomos.html">Quem Somos</a>
+                <a href="nossosservicos.html">Nossos Serviços</a>
+                <a href="galeria.html">Galeria</a>
+            </div>
+            <div class="menu-direita">
+                <a href="contactos.html">Contactos</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="intro-section">
+        <h2>Nossos Serviços</h2> 
+    </div>
+    <style>
+        
+        body {
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color:rgb(228, 236, 243);
+        }
+    
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 30%; 
+            background-color: #e6e6e4;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 0;
+            color: rgb(9, 49, 158);
+            box-shadow: 100px;
+            
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; 
+        }
+
+        .logo img {
+            height: 150px; 
+            width: 150px;
+            cursor: pointer;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            margin-top: 0%;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 40px;
+            
+        }
+
+        .menu-esquerda {
+            display: flex;
+            gap: 20px;
+            margin-left: 5%;
+           
+        }
+
+        .menu-direita {
+            display: flex;
+            margin-right: 5%;
+        }
+
+        nav a {
+            color: rgb(2, 54, 106);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 300;
+            text-shadow: #e6e6e4;
+            text-shadow: 100px;
+        }
+
+        nav a:hover {
+            text-decoration:underline;
+            
+        }
+
+        .container {
+            margin-top: 0; 
+            padding: 0px;
+        
+        }
+
+        .intro-section {
+            background-color: #e6e6e4; 
+            color: rgb(2, 54, 106);
+            padding: 100px;
+            text-align: center;
+            margin-top: 7%; 
+            margin-bottom: 10px;
+            
+        }
+
+        .intro-section h1 {
+            margin: 0 0 0px;
+        }
+
+        .intro-section p {
+            margin: 0;
+        }
+
+        
+        .photo-section {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            padding: 20px 0;
+        }
+
+        .photo-section img {
+            width: 15%; 
+            max-width: 150px; 
+            height: auto;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+            transition: transform 0.3s ease;
+        }
+
+        .photo-section img:hover {
+            transform: scale(1.05); 
+        }
+
+       
+        .text-block {
+            background-color: #e9f2fa; 
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 100%;
+            border-radius: 5px;
+            font-size: 1rem;
+            line-height: 1.6;
+            text-align: justify;
+        }
+
+       
+        .see-more-button {
+            display: block;
+            margin: 30px auto;
+            padding: 15px 30px;
+            background-color: #fff;
+            color: #001f3f;
+            border: 2px solid #001f3f; 
+            border-radius: 5px;
+            font-size: 1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .see-more-button:hover {
+            background-color: #001f3f; 
+            color: #fff; 
+        }
+        footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <style>
+        
+    
+        /* Media Queries para telas médias (tablets) */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+    
+            .menu-esquerda, .menu-direita {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+    
+            .intro-section {
+                padding: 50px 10px;
+                margin-top: 150px; /* Ajuste para header fixo */
+            }
+    
+            .video-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+    
+            .video-section video {
+                width: 90%;
+            }
+    
+            .text-box {
+                margin: 0;
+                padding: 15px;
+            }
+    
+            .slideshow-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .slideshow-image, .slideshow-text {
+                width: 90%;
+            }
+        }
+    
+        /* Media Queries para telas pequenas (celulares) */
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 15px;
+            }
+    
+            .logo img {
+                height: 100px;
+                width: 100px;
+            }
+    
+            nav a {
+                font-size: 14px;
+            }
+    
+            .intro-section {
+                margin-top: 140px; 
+                padding: 30px 10px;
+            }
+    
+            .quizz-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+    
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+   
+
+    
+    <div class="photo-section">
+        <img src="midia/obra1.jpg" alt="Foto 1">
+        <img src="midia/obra2.jpg" alt="Foto 2">
+        <img src="midia/obra3.jpg" alt="Foto 3">
+        <img src="midia/obra4.jpg" alt="Foto 4">
+        <img src="midia/obra5.jpg" alt="Foto 5">
+        <img src="midia/obra6.jpg" alt="Foto 6">
+    </div>
+
+    
+    <div class="text-block">
+        <p>
+            Contratar a Machado Construções significa ter a tranquilidade de contar com todos os serviços necessários para a sua obra num só lugar. Com uma equipa completa garantimos uma execução integrada, ágil e de alta qualidade. Deixe a sua obra nas nossas mãos e veja a sua visão transformar-se em realidade, sem complicações!
+        </p>
+    </div>
+
+    
+    <div class="photo-section">
+        <img src="midia/design1.jpg" alt="Foto 7">
+        <img src="midia/design2.jpg" alt="Foto 8">
+        <img src="midia/design3.jpg" alt="Foto 9">
+        <img src="midia/design4.jpg" alt="Foto 10">
+        <img src="midia/design5.jpg" alt="Foto 11">
+        <img src="midia/design6.jpg" alt="Foto 12">
+    </div>
+
+    
+    <div class="text-block">
+        <p>
+            Na nossa empresa, tratamos de tudo para que a sua obra seja um sucesso do início ao fim. Para além de contar com uma equipa completa de profissionais especializados, também nos encarregamos dos projetos, das licenças necessárias e da decoração dos espaços, garantindo que cada detalhe seja pensado e executado com rigor. Estas etapas são fundamentais para assegurar que a obra esteja em conformidade com as normas legais, seja bem planeada e que o resultado final combine funcionalidade e estética.
+        </p>
+    </div>
+
+    
+    <a href="contactos.html" class="see-more-button">Agende uma Visita</a>
+    <footer>
+        <p>Copyright © 2024 Machado Construções</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://tiktok.com" target="_blank">TikTok</a>
+        </div>
+    </footer>
+</body>
+</html>

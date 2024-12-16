@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz - Estilo de Design de Interiores</title>
+    <style>
+        body {
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color:rgb(237, 246, 253);
+        }
+    
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 30%; 
+            background-color: #e6e6e4;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 0;
+            color: rgb(9, 49, 158);
+            box-shadow: 100px;
+            
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; 
+        }
+
+        .logo img {
+            height: 150px; 
+            width: 150px;
+            cursor: pointer;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            margin-top: 0%;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 40px; 
+            
+        }
+
+        .menu-esquerda {
+            display: flex;
+            gap: 20px;
+            margin-left: 5%;
+           
+        }
+
+        .menu-direita {
+            display: flex;
+            margin-right: 5%;
+        }
+
+        nav a {
+            color: rgb(2, 54, 106);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 300;
+            text-shadow: #e6e6e4;
+            text-shadow: 100px;
+        }
+
+        nav a:hover {
+            text-decoration:underline;
+            
+        }
+
+        .container {
+            margin-top: 0;
+            padding: 0px;
+        
+        }
+
+        .intro-section {
+            background-color: #e6e6e4; 
+            color: rgb(2, 54, 106);
+            padding: 100px;
+            text-align: center;
+            margin-top: 7%; 
+            margin-bottom: 10px;
+            
+        }
+
+        .intro-section h1 {
+            margin: 0 0 0px;
+        }
+
+        .intro-section p {
+            margin: 0;
+        }
+
+        .quiz-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            text-align: center;
+            justify-content: center;
+            position: relative;
+            margin-top: 30px;
+            margin-left: 35%;
+            margin-bottom: 2%;
+        }
+
+        .quiz-header {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+        }
+
+        .quiz-options {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .quiz-options button {
+            background-color: #a9cfe6;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .quiz-options button:hover {
+            background-color: #0074d9; 
+            color: #ffffff;
+        }
+
+        .result {
+            font-size: 1.2rem;
+            margin-top: 20px;
+        }
+
+        .fireworks {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            overflow: hidden;
+        }
+
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background-color: transparent;
+            border-radius: 50%;
+            animation: firework 2s infinite;
+        }
+
+        @keyframes firework {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+
+        #retry-button {
+            display: none;
+            margin-top: 20px;
+            background-color: #ffffff;
+            color: #0074d9;
+            padding: 10px 20px;
+            border: 2px solid #0074d9;
+            border-radius: 5px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        #retry-button:hover {
+            background-color: #0074d9;
+            color: #ffffff;
+        }
+        
+        footer {
+    background-color: #001f3f;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+    margin-top: auto; 
+    justify-content: end;
+}
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+    <style>
+    
+        /* Media Queries para telas médias (tablets) */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+            }
+    
+            .menu-esquerda, .menu-direita {
+                flex-direction: column;
+                align-items: center;
+                gap: 10px;
+            }
+    
+            .intro-section {
+                padding: 50px 10px;
+                margin-top: 150px; /* Ajuste para header fixo */
+            }
+    
+            .video-section {
+                flex-direction: column;
+                gap: 20px;
+                text-align: center;
+            }
+    
+            .video-section video {
+                width: 90%;
+            }
+    
+            .text-box {
+                margin: 0;
+                padding: 15px;
+            }
+    
+            .slideshow-container {
+                flex-direction: column;
+                align-items: center;
+            }
+    
+            .slideshow-image, .slideshow-text {
+                width: 90%;
+            }
+        }
+    
+        /* Media Queries para telas pequenas (celular) */
+        @media (max-width: 480px) {
+            header {
+                padding: 10px 15px;
+            }
+    
+            .logo img {
+                height: 100px;
+                width: 100px;
+            }
+    
+            nav a {
+                font-size: 14px;
+            }
+    
+            .intro-section {
+                margin-top: 140px; /* Ajuste adicional para header fixo */
+                padding: 30px 10px;
+            }
+    
+            .quizz-button {
+                font-size: 0.9rem;
+                padding: 10px 20px;
+            }
+    
+            footer {
+                font-size: 0.8rem;
+            }
+        }
+    </style>
+    
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="midia/logo.png" alt="Logo da Empresa">
+            </a>
+        </div>
+        <nav>
+            <div class="menu-esquerda">
+                <a href="quemsomos.html">Quem Somos</a>
+                <a href="nossosservicos.html">Nossos Serviços</a>
+                <a href="galeria.html">Galeria</a>
+            </div>
+            <div class="menu-direita">
+                <a href="contactos.html">Contactos</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="intro-section">
+        <h2>Quizz de Estilo</h2> 
+    </div>
+    <div class="quiz-container">
+        <div class="fireworks" id="fireworks"></div>
+        <div class="quiz-header" id="question">Pergunta será exibida aqui</div>
+        <div class="quiz-options">
+            <button onclick="selectOption(0)" id="option0">Opção 1</button>
+            <button onclick="selectOption(1)" id="option1">Opção 2</button>
+            <button onclick="selectOption(2)" id="option2">Opção 3</button>
+        </div>
+        <div class="result" id="result"></div>
+        <button id="retry-button" onclick="restartQuiz()">Refazer o Quiz</button>
+    </div>
+
+    <script>
+        const quizData = [
+            {
+                question: "Qual material você prefere para os móveis?",
+                options: ["Madeira natural", "Aço inoxidável", "Rattan ou bambu"],
+                scores: [1, 2, 3]
+            },
+            {
+                question: "Qual paleta de cores você prefere?",
+                options: ["Tons neutros", "Tons monocromáticos", "Cores vivas e quentes"],
+                scores: [1, 2, 3]
+            },
+            {
+                question: "Qual tipo de iluminação você prefere?",
+                options: ["Luz natural", "LEDs modernos", "Lâmpadas aconchegantes"],
+                scores: [1, 2, 3]
+            },
+            {
+                question: "Qual estilo de decoração você prefere?",
+                options: ["Minimalista", "Industrial", "Boho"],
+                scores: [1, 2, 3]
+            },
+            {
+                question: "Como você descreveria sua casa dos sonhos?",
+                options: ["Funcional e simples", "Urbana e estilosa", "Confortável e cheia de personalidade"],
+                scores: [1, 2, 3]
+            }
+        ];
+
+        let currentQuestion = 0;
+        let totalScore = 0;
+
+        const questionEl = document.getElementById("question");
+        const optionButtons = [
+            document.getElementById("option0"),
+            document.getElementById("option1"),
+            document.getElementById("option2"),
+        ];
+        const resultEl = document.getElementById("result");
+        const retryButton = document.getElementById("retry-button");
+        const fireworksEl = document.getElementById("fireworks");
+
+        function loadQuestion() {
+            if (currentQuestion < quizData.length) {
+                const currentQuiz = quizData[currentQuestion];
+                questionEl.textContent = currentQuiz.question;
+                optionButtons.forEach((button, index) => {
+                    button.textContent = currentQuiz.options[index];
+                    button.style.display = "block";
+                });
+                resultEl.textContent = "";
+                retryButton.style.display = "none";
+            } else {
+                showResult();
+            }
+        }
+
+        function selectOption(index) {
+            totalScore += quizData[currentQuestion].scores[index];
+            currentQuestion++;
+            loadQuestion();
+        }
+
+        function showResult() {
+            let style;
+            if (totalScore <= 6) {
+                style = "Minimalista";
+            } else if (totalScore <= 10) {
+                style = "Industrial";
+            } else {
+                style = "Boho";
+            }
+            questionEl.textContent = "Resultado:";
+            resultEl.textContent = `Seu estilo de design de interiores é: ${style}`;
+            optionButtons.forEach(button => button.style.display = "none");
+            retryButton.style.display = "inline-block";
+            startFireworks();
+        }
+
+        function restartQuiz() {
+            currentQuestion = 0;
+            totalScore = 0;
+            fireworksEl.innerHTML = ""; // Remove os fogos
+            loadQuestion();
+        }
+
+        function startFireworks() {
+            fireworksEl.style.display = "block";
+            for (let i = 0; i < 10; i++) {
+                const firework = document.createElement("div");
+                firework.className = "firework";
+                firework.style.left = `${Math.random() * 100}%`;
+                firework.style.top = `${Math.random() * 100}%`;
+                firework.style.backgroundColor = `hsl(${Math.random() * 360}, 100%, 50%)`;
+                fireworksEl.appendChild(firework);
+            }
+            setTimeout(() => fireworksEl.style.display = "none", 3000); // Para os fogos após 3 segundos
+        }
+
+        loadQuestion();
+    </script>
+    <footer>
+        <p>Copyright © 2024 Machado Construções</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank">Facebook</a>
+            <a href="https://instagram.com" target="_blank">Instagram</a>
+            <a href="https://tiktok.com" target="_blank">TikTok</a>
+        </div>
+    </footer>
+</body>
+</html>

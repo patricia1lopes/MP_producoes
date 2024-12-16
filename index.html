@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Site</title>
+    <style>
+        body {
+            margin: 0;
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            background-color:rgb(237, 246, 253);
+        }
+    
+
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 30%;
+            background-color: #e6e6e4;
+            z-index: 1000;
+            display: flex;
+            flex-direction: column; 
+            align-items: center; 
+            padding: 0;
+            color: rgb(9, 49, 158);
+            box-shadow: 100px;
+            
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 20px; 
+        }
+
+        .logo img {
+            height: 150px;
+            width: 150px;
+            cursor: pointer;
+            align-items: center;
+            justify-items: center;
+            justify-content: center;
+            margin-top: 0%;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            justify-content: space-between; 
+            align-items: center;
+            padding: 0 40px; 
+            
+        }
+
+        .menu-esquerda {
+            display: flex;
+            gap: 20px;
+            margin-left: 5%;
+           
+        }
+
+        .menu-direita {
+            display: flex;
+            margin-right: 5%;
+        }
+
+        nav a {
+            color: rgb(2, 54, 106);
+            text-decoration: none;
+            font-size: 17px;
+            font-weight: 300;
+            text-shadow: #e6e6e4;
+            text-shadow: 100px;
+        }
+
+        nav a:hover {
+            text-decoration:underline;
+            
+        }
+
+        .container {
+            margin-top: 0; 
+            padding: 0px;
+        }
+
+        .intro-section {
+            background-color: #e6e6e4; 
+            color: rgb(2, 54, 106);
+            padding: 200px;
+            text-align: center;
+            margin-top: 7%; 
+            margin-bottom: 30px;
+            
+        }
+
+        .intro-section h1 {
+            margin: 0 0 10px;
+        }
+
+        .intro-section p {
+            margin: 0;
+        }
+    </style>
+    <style>
+        <style>
+    /* Estilos base continuam os mesmos */
+
+    /* Media Queries para telas médias (tablets) */
+    @media (max-width: 768px) {
+        nav {
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .menu-esquerda, .menu-direita {
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .intro-section {
+            padding: 50px 10px;
+            margin-top: 150px; /* Ajuste para header fixo */
+        }
+
+        .video-section {
+            flex-direction: column;
+            gap: 20px;
+            text-align: center;
+        }
+
+        .video-section video {
+            width: 90%;
+        }
+
+        .text-box {
+            margin: 0;
+            padding: 15px;
+        }
+
+        .slideshow-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .slideshow-image, .slideshow-text {
+            width: 90%;
+        }
+    }
+
+    /* Media Queries para telas pequenas (celulares) */
+    @media (max-width: 480px) {
+        header {
+            padding: 10px 15px;
+        }
+
+        .logo img {
+            height: 100px;
+            width: 100px;
+        }
+
+        nav a {
+            font-size: 14px;
+        }
+
+        .intro-section {
+            margin-top: 140px; /* Ajuste adicional para header fixo */
+            padding: 30px 10px;
+        }
+
+        .quizz-button {
+            font-size: 0.9rem;
+            padding: 10px 20px;
+        }
+
+        footer {
+            font-size: 0.8rem;
+        }
+    }
+</style>
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <img src="midia/logo.png" alt="Logo da Empresa">
+            </a>
+        </div>
+        <nav>
+            <div class="menu-esquerda">
+                <a href="quemsomos.html">Quem Somos</a>
+                <a href="nossosservicos.html">Nossos Serviços</a>
+                <a href="galeria.html">Galeria</a>
+            </div>
+            <div class="menu-direita">
+                <a href="contactos.html">Contactos</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="intro-section">
+        <h2>Transforme o seu espaço.</h2> 
+        <h2>Transforme a sua vida.</h2>
+        <p>Especializados em obras e design de interiores, unimos criatividade, funcionalidade e excelência técnica </p>
+        <p>para entregar projetos que refletem a personalidade e as necessidades de nossos clientes.</p>
+    </div>
+
+    <div class="container">
+        <div class="video-section">
+            <div class="text-box">
+                <h3 style="text-align:center; font-size:large;">Desde o projeto até o seu espaço pronto</h3>
+                <p style="text-align:center; font-size:small;">Na Machado Construções, transformamos espaços em verdadeiras obras de arte. Seja para residências ou espaços comerciais, estamos prontos para concretizar a visão dos nossos clientes e superar expectativas.</p>
+            </div>
+            <video autoplay loop controls>
+                <source src="midia2/MACHADOCONSTRUCOESPROMO.mp4" type="video/mp4">
+                Seu navegador não suporta vídeos HTML5.
+            </video>
+        </div>
+        <style>
+    
+        .video-section {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 2%;
+        }
+        .video-section video {
+            width: 60%;
+        }
+        .text-box {
+            background-color: #e9f2fa;
+            padding: 145px;
+            flex: 1;
+            margin: 20 40px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            color: rgb(2, 54, 106);
+    
+        }
+        </style>
+
+        <div class="slideshow-container">
+            <img id="slideshow-image" class="slideshow-image" src="midia/projetocasa.jpg" alt="Foto 1">
+            <div class="slideshow-text">
+                <h1 id="slideshow-title">Projetos de Casas</h1>
+                <p id="slideshow-description">Projetos de design de interiores para espaços residenciais. Oferecemos serviços completos e chave na mão de reabilitação, decoração e styling.</p>
+            </div>
+        </div>
+        <script>
+            const slides = [
+                {
+                    image: "midia/projetocasa.jpg",
+                    title: "Projetos de Casas",
+                    description: "Projetos de design de interiores para espaços residenciais. Oferecemos serviços completos e chave na mão de reabilitação, decoração e styling."
+                },
+                {
+                    image: "midia/projetoescritorio.png",
+                    title: "Projetos de Escritórios",
+                    description: "Projetos de design de interiores para espaços de trabalho. Oferecemos serviços completos de reabilitação, organização de espaço e soluções de mobiliário de escritório."
+                },
+                {
+                    image: "midia/projetorestaurante.jpg",
+                    title: "Projetos de espaços Comerciais",
+                    description: "Projetos de design de interiores de espaços comerciais e boutique. Oferecemos serviços completos de reabilitação e decoração para restaurantes, lojas, pequenos hotéis e alojamento local."
+                }
+            ];
+    
+            let currentSlide = 0;
+    
+            function changeSlide() {
+                currentSlide = (currentSlide + 1) % slides.length;
+                const slide = slides[currentSlide];
+                document.getElementById("slideshow-image").src = slide.image;
+                document.getElementById("slideshow-title").textContent = slide.title;
+                document.getElementById("slideshow-description").textContent = slide.description;
+            }
+    
+            setInterval(changeSlide, 4000);
+        </script>
+        
+        <style>
+             .slideshow-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            background-color: #e6e6e4;
+            height: 500px;
+            overflow: hidden;
+            margin-top: 5%;
+            margin-bottom: 5%;
+        }
+
+        .slideshow-image {
+            width: 60%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .slideshow-text {
+            width: 35%;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            text-align: center;
+        }
+
+        .slideshow-text h1 {
+            margin: 0 0 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .slideshow-text p {
+            margin: 0;
+            font-size: 16px;
+            color: #555;
+        }
+
+        .fade {
+            animation: fadeEffect 1.5s;
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        </style>
+
+        <div class="container">
+            <a href="quizz.html" class="quizz-button">Faça aqui o QUIZZ DE ESTILOS e descubra mais sobre si!!!</a>
+        </div>
+        <style>
+            .quizz-button {
+                display: block;
+            margin: 40px auto;
+            padding: 15px 30px;
+            background-color: white;
+            color: #00274d; 
+            border: 2px solid #00274d;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Drop shadow */
+            transition: all 0.3s ease-in-out;
+        }
+
+        .quizz-button:hover {
+            background-color: #00274d;
+            color: white;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        @keyframes fadeEffect {
+            from { opacity: 0.5; }
+            to { opacity: 1; }
+        }
+        </style>
+
+        <footer>
+            <p>Copyright © 2024 Machado Construções</p>
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank">Facebook</a>
+                <a href="https://instagram.com" target="_blank">Instagram</a>
+                <a href="https://tiktok.com" target="_blank">TikTok</a>
+            </div>
+        </footer>
+        <style>
+            footer {
+            background-color: #001f3f;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            margin-top: auto;
+            box-shadow: 0 4px 8px rgba(10, 20, 102, 0.2);
+        }
+        .social-links a {
+            margin: 0 10px;
+            color: white;
+            text-decoration: none;
+        }
+        .social-links a:hover {
+            text-decoration: underline;
+        }
+        </style>
+
+    
+</body>
+</html>
+
